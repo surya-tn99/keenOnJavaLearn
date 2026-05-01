@@ -10,6 +10,7 @@
 
 import java.lang.Math;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
     static int tint1;
@@ -70,6 +71,59 @@ public class Main {
         // 2. Only works for local variables
         var age = 20002;
         var name = "surya";
+
+        /** "3" Types of Scope
+        * 1.Class Scope
+            Declared inside class, outside any method. Accessible anywhere in the class.
+        * 2.Method Scope
+            Declared inside a method.Accessible only within that method.
+        * 3.Block Scope
+            Declared inside a block { } — like inside a loop or if statement
+            Accessible only within that block.
+        **/
+
+        /** 2 Types of Type Casting
+         * 1. Widening Casting (Automatic)
+           Small type → Big type
+           Java does this automatically — no data loss risk.
+           byte → short → int → long → float → double
+         * 2. Narrowing Casting (Manual)
+           Big type → Small type
+           You have to do it explicitly — risk of data loss.
+         */
+
+        // Arrays
+
+        // The array size must be decided upon instantiation
+        // The following formats work for declaring an array
+
+        // in java.util.Arrays class we have helper functions for arrays.
+
+        // <datatype>[] <var name> = new <datatype>[<array size>];
+        // <datatype> <var name>[] = new <datatype>[<array size>];
+        int[] intArray = new int[2];
+        String[] stringArray = new String[2];
+        boolean[] boolArray = new boolean[2];
+
+        // Another way to declare & initialize an array
+        int[] y = {9000, 1000, 1337};
+        String[] names = {"manoj", "ashok", "bala"};
+        boolean[] bools = {true, false, false};
+
+        System.out.println("array length : " + bools.length);
+
+        // Switch
+        switch("bala"){
+            case "bala": System.out.println("bala");
+            case "surya": System.out.println("surya"); break;
+            default: break;
+        }
+
+        // Loop
+        // For Each
+        for(String n : names){
+            System.out.println(n);
+        }
     }
 };
 
